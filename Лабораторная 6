@@ -1,0 +1,47 @@
+<html>
+
+	<body>
+
+		<input type=button value=Начать id="buttonstart" onclick = OpenForm()>
+
+		<form onsubmit="Submit()" id="buttonform"></form>
+
+		<script>
+			function OpenForm() {
+				buttonstart.onclick = null;
+				buttonform.innerHTML +=  "Заполните поля ниже: " + "<br>";
+
+				buttonform.innerHTML += "<input type='checkbox'> Рыба"+"<br>";
+
+				buttonform.innerHTML += "<input type='text'>"+"<br>";
+
+				buttonform.innerHTML += "<input type='date'>"+"<br><br>";
+
+				buttonform.innerHTML += "<input type='submit'>";
+
+			};
+
+			function Submit() {
+				if (document.forms[0].elements[0].checked) {
+					alert(document.forms[0].elements[0].checked)
+					} else {
+						alert("Первое поле не заполнено")
+					};
+
+				if (document.forms[0].elements[1].value) {
+					alert(document.forms[0].elements[1].value)
+					} else {
+						alert("Второе поле не заполнено")
+					};
+
+				if (document.forms[0].elements[2].value) {
+					alert(document.forms[0].elements[2].value)
+					} else {
+						alert("Третье поле не заполнено")
+					};
+			};
+		</script>
+
+	</body>
+
+</html>
