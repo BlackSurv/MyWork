@@ -8,7 +8,7 @@
 	let cookies = document.cookie.split(';');
 	for (let i = 0; i<cookies.length; i++) {
 		let li = document.createElement('li');
-		li.textContent = data[i];
+		li.textContent = cookies[i];
 		ul.append(li);
 	}
 
